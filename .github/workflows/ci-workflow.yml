@@ -22,6 +22,7 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Setup cc-test-reporter
+        if: github.repository != 'anchan828/nest-lerna-template'
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           chmod +x ./cc-test-reporter
@@ -31,4 +32,5 @@ jobs:
           npm test
           npx ts-node scripts/merge-coverage.ts
       - name: Report coverage
+        if: github.repository != 'anchan828/nest-lerna-template'
         run: ./cc-test-reporter after-build -r ${{ secrets.CC_TEST_REPORTER_ID }} --coverage-input-type lcov

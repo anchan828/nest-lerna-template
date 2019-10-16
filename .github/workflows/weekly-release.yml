@@ -20,6 +20,7 @@ jobs:
           npm run bootstrap
           npm run build
       - name: Publish monorepo packages
+        if: github.repository != 'anchan828/nest-lerna-template'
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
           git config --global user.email "${USERNAME}@gmail.com"
