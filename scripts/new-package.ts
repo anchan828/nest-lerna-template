@@ -52,7 +52,7 @@ const packageJson = {
     dist: "dist",
   },
   files: ["dist"],
-  homepage: `${rootPackageJson.homepage}/tree/master/packages/${packageName}#readme`,
+  homepage: `${rootPackageJson.homepage}/tree/master/packages/${packageName.replace(/^nest-/g, "")}#readme`,
   license: "MIT",
   main: "./dist/index.js",
   name: "@anchan828/" + packageName,

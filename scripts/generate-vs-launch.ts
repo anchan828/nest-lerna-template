@@ -21,7 +21,7 @@ const launch = {
     console: "integratedTerminal",
     cwd: "${workspaceRoot}/packages/" + packageName,
     internalConsoleOptions: "neverOpen",
-    name: `@anchan828/${packageName} test debug`,
+    name: `${packageName} test debug`,
     port: 9229,
     request: "launch",
     runtimeArgs: ["run", "test:debug"],
