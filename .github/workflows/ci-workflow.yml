@@ -15,10 +15,6 @@ jobs:
           fetch-depth: 1
       - name: Install npm packages
         run: npm ci
-      - name: Bootstrap monorepo packages
-        run: |
-          npm run bootstrap
-          npm run build
       - name: Lint
         run: npm run lint
       - name: Setup cc-test-reporter
