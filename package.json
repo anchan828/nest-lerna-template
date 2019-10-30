@@ -17,7 +17,8 @@
     "publish:major": "lerna publish --yes major",
     "test": "lerna run test",
     "new": "ts-node scripts/new-package.ts",
-    "postnew": "ts-node scripts/generate-vs-launch.ts"
+    "postnew": "ts-node scripts/generate-vs-launch.ts",
+    "watch": "lerna run --parallel watch"
   },
   "repository": {
     "type": "git",
