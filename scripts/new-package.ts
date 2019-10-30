@@ -67,7 +67,7 @@ const packageJson = {
     test: "node ../../node_modules/jest/bin/jest --coverage --logHeapUsage --runInBand",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --logHeapUsage",
     "test:watch": "node ../../node_modules/jest/bin/jest --watch",
-    watch: "rm -rf dist && node ../../node_modules/typescript/bin/tsc -w",
+    watch: "node ../../node_modules/typescript/bin/tsc -w",
   },
   types: "./dist/index.d.ts",
   version: lernaJson.version,
