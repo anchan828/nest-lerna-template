@@ -13,6 +13,10 @@ jobs:
       - uses: actions/checkout@master
       - name: Checkout master
         run: git checkout master
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node
       - name: Install npm packages
         run: npm ci
       - name: Bootstrap monorepo packages
