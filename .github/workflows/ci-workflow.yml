@@ -13,12 +13,18 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - uses: actions/cache@preview
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - uses: actions/cache@v1
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Install npm packages
-        run: npm i
+        run: npm 
       - name: Lint
         run: npm run lint
       - name: Setup cc-test-reporter
