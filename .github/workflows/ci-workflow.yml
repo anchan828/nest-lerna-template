@@ -13,16 +13,10 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: Get npm cache directory
-        id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
       - uses: actions/cache@v1
         with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          path: ~/.npm
+          key: ${{ runner.os }}-node
       - name: Install npm packages
         run: npm 
       - name: Lint
