@@ -18,7 +18,7 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node
       - name: Install npm packages
-        run: npm 
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Setup cc-test-reporter
