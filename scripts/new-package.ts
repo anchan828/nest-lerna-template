@@ -65,7 +65,7 @@ const packageJson = {
     "lint:fix": "npm run lint -- --fix",
     prepublishOnly: "rm -rf dist && npm run build && rm -f dist/*.tsbuildinfo && npm run copy:license",
     test: "node ../../node_modules/jest/bin/jest --coverage --logHeapUsage --runInBand",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --logHeapUsage",
+    "test:debug": "node --inspect-brk ../../node_modules/jest/bin/jest --runInBand --logHeapUsage",
     "test:watch": "node ../../node_modules/jest/bin/jest --watch",
     watch: "node ../../node_modules/typescript/bin/tsc -w",
   },
