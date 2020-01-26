@@ -4,5 +4,6 @@
   "major": {
     "automerge": false
   },
+  "postUpdateOptions": ["npmDedupe"],
   "semanticCommits": true
 }
