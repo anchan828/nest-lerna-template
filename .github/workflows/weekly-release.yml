@@ -15,12 +15,10 @@ jobs:
         run: git checkout master
       - uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          path: node_modules
+          key: ${{ runner.os }}-node
       - name: Install npm packages
-        run: npm ci
+        run: npm i
       - name: Bootstrap monorepo packages
         run: |
           npm run bootstrap
