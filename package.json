@@ -32,9 +32,9 @@
     "watch": "turbo run watch"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
-    "@commitlint/config-lerna-scopes": "^17.6.2",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/config-lerna-scopes": "^17.6.3",
     "@compodoc/compodoc": "^1.1.19",
     "@lerna-lite/cli": "^2.2.0",
     "@nestjs/common": "^9.4.0",
